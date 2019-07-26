@@ -1,0 +1,10 @@
+version: "3"
+services:
+  alexa-subwatch:
+    image: simplysublime/alexa-subwatch
+    container_name: alexa-subwatch
+    volumes:
+      - ./subwatch:/config
+    restart: unless-stopped
+    network_mode: bridge
+    hostname: alexa-subwatch

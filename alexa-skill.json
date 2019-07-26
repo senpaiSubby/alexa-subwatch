@@ -1,0 +1,318 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sub watch",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "addMovie",
+                    "slots": [
+                        {
+                            "name": "movie",
+                            "type": "AMAZON.Movie",
+                            "samples": [
+                                "{movie}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "to add a movie to radarr {movie}",
+                        "add a movie to radarr {movie}",
+                        "to add the movie {movie}",
+                        "to download the movie {movie}",
+                        "to add a movie {movie}",
+                        "add a movie {movie}",
+                        "download the movie {movie}",
+                        "add the movie {movie}",
+                        "add movie {movie}",
+                        "download movie {movie}",
+                        "download the movie {movie}",
+                        "add movie {movie} to radarr",
+                        "add film {movie}",
+                        "add the film {movie}"
+                    ]
+                },
+                {
+                    "name": "addSeries",
+                    "slots": [
+                        {
+                            "name": "series",
+                            "type": "AMAZON.TVSeries",
+                            "samples": [
+                                "{series}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "add a TV show {series}",
+                        "add a series to sonarr {series}",
+                        "add a series {series}",
+                        "add series {series}",
+                        "add series {series} to sonarr",
+                        "add the TV show {series}",
+                        "add the series {series}",
+                        "download the series {series}",
+                        "to add a TV show",
+                        "to add a series to sonarr {series}",
+                        "to add a series {series}",
+                        "to add the TV show {series}",
+                        "to add the series {series}",
+                        "to download the series {series}",
+                        "to download {series}",
+                        "add show  {series}",
+                        "add a show  {series}",
+                        "add the show  {series}"
+                    ]
+                },
+                {
+                    "name": "YesIntent",
+                    "slots": [],
+                    "samples": [
+                        "yea",
+                        "go ahead",
+                        "ya",
+                        "yah",
+                        "yes mam",
+                        "yeah",
+                        "ok",
+                        "sure",
+                        "yes",
+                        "sounds good",
+                        "yup"
+                    ]
+                },
+                {
+                    "name": "NextPage",
+                    "slots": [],
+                    "samples": [
+                        "go forward",
+                        "forward",
+                        "next",
+                        "next page"
+                    ]
+                },
+                {
+                    "name": "BackPage",
+                    "slots": [],
+                    "samples": [
+                        "last page",
+                        "last",
+                        "backwards",
+                        "back",
+                        "go back"
+                    ]
+                },
+                {
+                    "name": "ChoiceOne",
+                    "slots": [],
+                    "samples": [
+                        "first one",
+                        "the first one",
+                        "first",
+                        "choice one",
+                        "one"
+                    ]
+                },
+                {
+                    "name": "ChoiceTwo",
+                    "slots": [],
+                    "samples": [
+                        "second one",
+                        "the second one",
+                        "second",
+                        "choice two",
+                        "two"
+                    ]
+                },
+                {
+                    "name": "ChoiceThree",
+                    "slots": [],
+                    "samples": [
+                        "third one",
+                        "the third one",
+                        "third",
+                        "choice three",
+                        "three",
+                        "last",
+                        "last one"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "addMovie",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "movie",
+                            "type": "AMAZON.Movie",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.421703793787.227992122518",
+                                "elicitation": "Elicit.Slot.75334835762.154055479975"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "addSeries",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "series",
+                            "type": "AMAZON.TVSeries",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1302246147776.708344881040",
+                                "elicitation": "Elicit.Slot.1302246147776.708344881040"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ChoiceOne",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1365699953943"
+                    },
+                    "slots": []
+                },
+                {
+                    "name": "ChoiceTwo",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.87318130055"
+                    },
+                    "slots": []
+                },
+                {
+                    "name": "ChoiceThree",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.460741758998"
+                    },
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.75334835762.154055479975",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What movie?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1509431812709",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The movie, {movie} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1509431812709.519283526246",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The movie, {movie} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1302246147776.708344881040",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What TV series?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1302246147776.708344881040",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The show, {series} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.447092015971",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you'd like to add all of the results from this page?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1365699953943",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The first result right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.87318130055",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The second result right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.460741758998",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The third result right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.421703793787.227992122518",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The movie {movie} right?"
+                    }
+                ]
+            }
+        ]
+    }
+}
