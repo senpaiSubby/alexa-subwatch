@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 
 VOLUME ["/config"]
 
-ENTRYPOINT /app/start.sh && /bin/bash
+CMD [ "python", "./main.py" ]
