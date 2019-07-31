@@ -25,8 +25,8 @@ from time import sleep
 now = datetime.now()
 now = now.strftime("%b/%d/%y %H:%m:%S")
 
-configFile = "config.yaml"
-#configFile = "/config/config.yaml"
+#configFile = "config.yaml"
+configFile = "/config/config.yaml"
 
 def createConfig():
     createConfig = {
@@ -48,10 +48,6 @@ def createConfig():
             "autosearch": True,
             "seriesType": "standard",
             "seasonfolder": True,
-        },
-        "ombi": {
-            "API": "",
-            "language": "en",
         },
 
     }

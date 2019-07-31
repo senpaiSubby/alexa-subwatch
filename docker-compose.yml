@@ -1,7 +1,7 @@
 version: "3"
 services:
   alexa-subwatch:
-    image: simplysublime/alexa-subwatch
+    image: simplysublime/alexa-subwatch:latest
     container_name: alexa-subwatch
     volumes:
       - ./subwatch:/config
