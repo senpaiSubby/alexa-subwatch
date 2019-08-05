@@ -19,8 +19,6 @@ radarr:
   autosearch: true
   monitored: true
   profile: 6
-  reasonfolder: true
-  seriesType: standard
   url: https://radarr.yourwebsite.com
 sonarr:
   API: 7cae34ece13e111cf81362621ada9afd
