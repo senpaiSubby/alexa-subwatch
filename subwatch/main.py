@@ -37,8 +37,6 @@ def createConfig():
             "profile": 6,
             "monitored": True,
             "autosearch": True,
-            "seriesType": "standard",
-            "reasonfolder": True,
         },
         "sonarr": {
             "url": "https://sonarr.atriox.io",
@@ -88,7 +86,7 @@ def clear():
 app = Flask(__name__)
 ask = Ask(app, "/")
 
-#logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 
 # ! DONT FORGET TO ADD NEW OPTIONS FOR THE INITAL MENU AND MAKE HELP SECTION!
@@ -538,7 +536,7 @@ def session_ended():
 
 
 if __name__ == '__main__':
-    print("alexa-subwatch up and running!")
-    http_server = WSGIServer(('', 5000), app)
-    http_server.serve_forever()
-    #app.run("0.0.0.0", 5000, debug=False)
+    #print("alexa-subwatch up and running!")
+    #http_server = WSGIServer(('', 5000), app)
+    #http_server.serve_forever()
+    app.run("0.0.0.0", 5000, debug=False)
