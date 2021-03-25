@@ -1,5 +1,5 @@
 Flask==1.1.1
-PyYAML==5.1.1
+PyYAML==5.4
 aniso8601==7.0.0
 six==1.12.0
 pyOpenSSL==19.0.0
